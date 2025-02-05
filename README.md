@@ -25,7 +25,7 @@ For each model run the following:
 The expected output is a folder with checkpoints for each model. The optimal checkpoints utilized in this work for each model are provided on [Google Drive](https://drive.google.com/drive/u/2/folders/1WijbpvpEIuInb6mI43twwP2CYRpvlxK0).
 
 ### Generate and select valid peptides
-First, select the optimal model from the previous checkpoints based on the loss plots. Save them in a folder named `checkpoint_MODEL` where MODEL = {FBGAN, FBGAN-kmers, FBGAN-ESM2} and run:
+First, select the optimal model from the previous checkpoints based on the loss plots. Save them in a folder named `checkpoint_MODEL` where MODEL = {cdGAN, cdGAN_mlt} and run:
 - Single-task cdGAN: `generate_samples_cdGAN.py`
 - Multi-task cdGAN: `generate_samples_cdGAN_mlt.py`
 
