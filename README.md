@@ -19,21 +19,20 @@ To run `train_MLP_classifier.py` first download `mean_embeddings_esm2_t12.csv` f
 
 ### Train the generative models
 For each model run the following:
-- FBGAN: `wgan_gp_lang_gene_analyzer_FBGAN.py`
-- FBGAN-kmers: `wgan_gp_lang_gene_FBGAN_kmers.py`
+- Single-task cdGAN: `cdGAN.py`
+- Multi-task cdGAN: `cdGAN_mlt.py`
   
-The expected output is a folder with checkpoints for each model. The optimal checkpoints utilized in this work for each model are provided on [Google Drive](https://drive.google.com/drive/folders/1ZqWM7aBK1EmOc13uP7a4D03Llztb7uvO?usp=sharing).
+The expected output is a folder with checkpoints for each model. The optimal checkpoints utilized in this work for each model are provided on [Google Drive](https://drive.google.com/drive/u/2/folders/1WijbpvpEIuInb6mI43twwP2CYRpvlxK0).
 
 ### Generate and select valid peptides
 First, select the optimal model from the previous checkpoints based on the loss plots. Save them in a folder named `checkpoint_MODEL` where MODEL = {FBGAN, FBGAN-kmers, FBGAN-ESM2} and run:
-- FBGAN: `generate_samples_FBGAN.py`
-- FBGAN-kmers: `generate_samples_FBGAN_kmers.py`
-- FBGAN-ESM2: `generate_samples_FBGAN_ESM2.py`
-  
+- Single-task cdGAN: `generate_samples_cdGAN.py`
+- Multi-task cdGAN: `generate_samples_cdGAN_mlt.py`
+
 The expected output is a `.txt` file for each model with all the generated sequences. Then, for each output run `select_valid_peptides.py` to create a `.fasta` file that contains validly generated peptides.
 
 ### Evaluate the models
 Use the code provided in the folder `evaluation`. The codes require the `.fasta` files created in the previous step.
-- To plot the average physiochemical values you need to first run the [CAMPR4 server](https://camp.bicnirrh.res.in/predict/) and select the peptides with $P(\text{AMP}) \geq 0.8$.
+- To produce the average physiochemical values, first run the [CAMPR4 server](https://camp.bicnirrh.res.in/predict/) and select the peptides with $P(\text{AMP}) \geq 0.8$.
 
 
