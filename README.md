@@ -12,10 +12,10 @@ To run this project, follow these steps:
 
 ### Train the classifiers and save the best model
 To do so, run:  
-- Single-task classifier: `amp_predictor_pytorch.py`
-- Multi-task classifier: `train_kmers_classifier.py`
+- Single-task classifier: `train_MLP_classifier.py`
+- Multi-task classifier: `train_MLP_MLT_classifier.py`
   
-To run `train_MLP_classifier.py` first download `mean_embeddings_esm2_t12.csv` from [Google Drive](https://drive.google.com/drive/folders/1ZqWM7aBK1EmOc13uP7a4D03Llztb7uvO?usp=sharing). The expected output for the kmers-based and ESM2-based classifiers is the best model saved in a `.pth` format. The best model for FBGAN classifier should be stored in `checkpoint_FBGAN_classifier` folder. You can find the pre-trained classifiers utilized in this work on the [Google Drive](https://drive.google.com/drive/folders/1ZqWM7aBK1EmOc13uP7a4D03Llztb7uvO?usp=sharing).
+To run `train_MLP_classifier.py` first download `mean_embeddings_esm2_t12.csv` from [Google Drive](https://drive.google.com/drive/folders/1ZqWM7aBK1EmOc13uP7a4D03Llztb7uvO?usp=sharing). The expected output is the best model saved in a `.pth` format.
 
 ### Train the generative models
 For each model run the following:
