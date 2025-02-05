@@ -272,18 +272,7 @@ class WGAN_LangGP():
 
                 self.G_optimizer.step()
                 G_losses.append((g_err.data).cpu().numpy())
-                if i % 10 == 9:
-                    summary_str = 'Iteration {} - loss_d: {}, loss_g: {}, w_dist: {}, grad_penalty: {}'\
-                        .format(i, (d_err.data).cpu().numpy(),
-                        (g_err.data).cpu().numpy(), ((d_real_err - d_fake_err).data).cpu().numpy(), gp_np)
-                    print(summary_str)
-                    losses_f.write(summary_str)
-                    plot_losses([G_losses, D_losses], ["gen", "disc"], self.sample_dir + "losses.png")
-                    plot_losses([W_dist], ["w_dist"], self.sample_dir + "dist.png")
-                    plot_losses([grad_penalties],["grad_penalties"], self.sample_dir + "grad.png")
-                    plot_losses([d_fake_losses, d_real_losses],["d_fake", "d_real"], self.sample_dir + "d_loss_components.png")
-                i += 1
-          
+
     def sample(self, num_batches_sample, epoch):
         decoded_seqs = []
         for i in range(num_batches_sample):
