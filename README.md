@@ -1,12 +1,9 @@
 # Classifier-driven Generative Adversarial Networks for Enhanced Antimicrobial Peptide Design
 
-Thus study proposes a novel classifier-driven GAN (cdGAN) framework that integrates classifier predictions directly into the loss function of the generative model enabling an adaptive, end-to-end learning process that enhances AMP generation without the need for explicit data modification. 
-By incorporating classifier guidance within the loss calculation, cdGAN dynamically optimizes both peptide diversity and functionality. Comparative studies show that cdGAN not only surpasses conventional guided-GAN architectures such as Conditional GANs and Auxiliary Classifier GANs but also achieves comparable and/or superior performance to established methods in AMP design. Last but not least, cdGAN’s flexible design allows for extension to multiple peptide attributes. To demonstrate this capability, we introduce a multi-task classifier based on the Evolutionary Scale Modeling 2 (ESM2) model, enabling cdGAN to evaluate both antimicrobial activity and peptide structural properties simultaneously. This enhancement increases the likelihood of generating viable therapeutic candidates with improved antimicrobial activity and reduced toxicity.This achievement underscores the effectiveness of leveraging advanced classifiers
-within the FBGAN framework, enhancing its computational robustness for AMP de novo design and
-making it comparable to existing literature.
+Thus study proposes a novel classifier-driven GAN (cdGAN) framework that integrates classifier predictions directly into the loss function of the generative model enabling an adaptive, end-to-end learning process that enhances AMP generation without the need for explicit data modification. Additionally, the flexible design of cdGAN allows for extension to multiple peptide attributes. To demonstrate this capability, we introduce a multi-task classifier based on the Evolutionary Scale Modeling 2 (ESM2) model, enabling cdGAN to evaluate both antimicrobial activity and peptide structural properties simultaneously. This enhancement increases the likelihood of generating viable therapeutic candidates with improved antimicrobial activity and reduced toxicity. 
 
 ## Install the dependencies
-The code is tested under Windows running python 3.8. All required packages are enclosed in `requirements.txt`. Run:
+The code is tested under Windows running python 3.11. All required packages are enclosed in `requirements.txt`. Run:
 ```bash
 pip install -r requirements.txt
 ```
