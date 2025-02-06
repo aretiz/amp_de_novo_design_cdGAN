@@ -33,6 +33,5 @@ The expected output is a `.txt` file for each model with all the generated seque
 
 ### Evaluate the models
 Use the code provided in the folder `evaluation`. The codes require the `.fasta` files created in the previous step.
-- To produce the average physiochemical values, first run the [CAMPR4 server](https://camp.bicnirrh.res.in/predict/) and select the peptides with $P(\text{AMP}) \geq 0.8$.
-
-
+- To predict the antimicrobial potency of the generated peptides, toxicity, hemolytic potency, and 3D-structure use [CAMPR4 server](https://camp.bicnirrh.res.in/predict/), [Toxinpred3.0](https://webs.iiitd.edu.in/raghava/toxinpred3/), [HemoPI](https://webs.iiitd.edu.in/raghava/hemopi/), and [Alphafold3](https://alphafoldserver.com/welcome).  
+  
